@@ -15,12 +15,24 @@
 // ============================================================================
 
 // Inclusão das bibliotecas padrão necessárias para entrada/saída, alocação de memória, manipulação de strings e tempo.
+#include <stdio.h>
+#include <string.h>
 
 // --- Constantes Globais ---
 // Definem valores fixos para o número de territórios, missões e tamanho máximo de strings, facilitando a manutenção.
+#define MAX_TERRITORIOS = 5 // Máximo de 5 territórios
+#define MAX_NOME = 30 // Máximo de 30 caracteres no nome
+#define MAX_COR = 15 // Máximo de 15 caracteres na cor
 
 // --- Estrutura de Dados ---
 // Define a estrutura para um território, contendo seu nome, a cor do exército que o domina e o número de tropas.
+typedef struct
+{
+    char nome[MAX_NOME]; // Utilizando MAX_NOME para limitar o tamanho do campo
+    char cor[MAX_COR]; // Utilizando MAX_COR para limitar o tamanho do campo
+    int tropas; // Quantidade de exércitos para o respectivo rerritório
+} Territorio;
+
 
 // --- Protótipos das Funções ---
 // Declarações antecipadas de todas as funções que serão usadas no programa, organizadas por categoria.
